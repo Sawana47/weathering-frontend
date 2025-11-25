@@ -9,7 +9,7 @@ export default function CrowdsourcedReports(){
 
   async function fetchReports(){
     try{
-      const res = await axios.get('/api/reports')
+      const res = await axios.get('axios.get('https://weathering-backend.onrender.com/api/reports')')
       setReports(res.data || [])
     }catch(e){
       setReports([])
@@ -19,7 +19,7 @@ export default function CrowdsourcedReports(){
   async function submit(){
     if(!text.trim()) return
     try{
-      await axios.post('/api/reports', { text, timestamp: Date.now() })
+      await axios.post('https://weathering-backend.onrender.com/api/reports', { text, timestamp: Date.now() })', { text, timestamp: Date.now() })
       setText('')
       fetchReports()
     }catch(e){
