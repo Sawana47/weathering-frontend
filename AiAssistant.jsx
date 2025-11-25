@@ -9,9 +9,9 @@ export default function AiAssistant(){
   async function ask(){
     setLoading(true)
     try{
-      const res = await axios.post('/api/assistant', { question: q })
+      const res = await axios.post(, { question: q })
       setAns(res.data.answer)
-    }catch(e){
+    }catch(e){axios.post('https://weathering-backend.onrender.com/api/assistant', { question: q })
       setAns('Assistant unavailable (demo).')
     }
     setLoading(false)
