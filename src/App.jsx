@@ -1,9 +1,9 @@
 import React from 'react'
-import WeatherDisplay from './components/WeatherDisplay'
-import ClothingRecommender from './components/ClothingRecommender'
+import WeatherDisplay from "./WeatherDisplay.jsx";
+import ClothingRecommender from "./ClothingRecommender.jsx";
 import CrowdsourcedReports from './components/CrowdsourcedReports'
-import WeatherDiary from './components/WeatherDiary'
-import AiAssistant from './components/AiAssistant'
+import WeatherDiary from "./WeatherDiary.jsx";
+import AIAssistant from "./AIAssistant.jsx";
 
 export default function App(){
   return (
