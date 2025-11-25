@@ -1,0 +1,8 @@
+/* Minimal styles for presentation */
+:root{--bg:#f8fbff;--card:#ffffff}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;background:var(--bg);color:#0f172a}
+.container{max-width:1024px;margin:24px auto;padding:16px}
+.card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
+.header{display:flex;justify-content:space-between;align-items:center}
+.controls{display:flex;gap:8px;align-items:center}
+.small{font-size:13px;color:#475569}
