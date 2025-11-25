@@ -1,7 +1,7 @@
 import React from 'react'
 import WeatherDisplay from "./WeatherDisplay.jsx";
 import ClothingRecommender from "./ClothingRecommender.jsx";
-import CrowdsourcedReports from './components/CrowdsourcedReports'
+import CrowdsourcedReports from "./CrowdsourcedReports.jsx";
 import WeatherDiary from "./WeatherDiary.jsx";
 import AIAssistant from "./AIAssistant.jsx";
 
