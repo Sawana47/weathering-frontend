@@ -7,14 +7,14 @@ export default function CrowdsourcedReports(){
 
   useEffect(()=>{ fetchReports() }, [])
 
-  async function fetchReports(){
-    try{
-      const res = await axios.get('https://weathering-backend.onrender.com/api/reports');
-      setReports(res.data || [])
-    }catch(e){
-      setReports([])
+  async function fetchReports() {
+    try {
+        const res = await axios.get('https://weathering-backend.onrender.com/api/reports');
+        setReports(res.data || []);
+    } catch (e) {
+        setReports([]);
     }
-  }
+}
 
   async function submit(){
     if(!text.trim()) return
