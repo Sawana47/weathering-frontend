@@ -1,11 +1,16 @@
 body {
-    margin: 0;
-    padding-top: 100px;   /* <-- ADD THIS */
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #001f3f, #0037ff, #00152f);
-    overflow-x: hidden;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e3d5ff, #c9b6ff, #f9d2ff, #d0c7ff);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
 }
 
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 /* Page Header */
 .page-header {
   text-align: center;
