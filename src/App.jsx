@@ -1,46 +1,32 @@
-import React, { useState, useEffect } from "react";
-import Navbar from "./Navbar.jsx";
+import React from "react";
+import Navbar from "./Navbar";
+
 import WeatherDisplay from "./WeatherDisplay.jsx";
 import ClothingRecommender from "./ClothingRecommender.jsx";
 import CrowdsourcedReports from "./CrowdsourcedReports.jsx";
 import WeatherDiary from "./WeatherDiary.jsx";
-import AIAssistant from "./AIAssistant.jsx";
+import AiAssistant from "./AiAssistant.jsx";
+
+import "./index.css";
 
 export default function App() {
-  const [dark, setDark] = useState(false);
-
-  useEffect(() => {
-    if (dark) document.body.classList.add("dark");
-    else document.body.classList.remove("dark");
-  }, [dark]);
-
   return (
-    <div className="container" style={{ padding: "16px", maxWidth: "900px", margin: "auto" }}>
+    <div className="container">
 
       <Navbar />
 
-      <button
-        onClick={() => setDark(!dark)}
-        style={{
-          padding: "10px 20px",
-          marginBottom: "16px",
-          borderRadius: "8px",
-          border: "none",
-          background: "#444",
-          color: "white",
-          cursor: "pointer"
-        }}
-      >
-        Toggle {dark ? "Light" : "Dark"} Mode
-      </button>
+      <header className="page-header">
+        <h1>WEATHERING — Hyperlocal Demo</h1>
+        <div className="subtext">Ready-to-run Skill Project for Presentation</div>
+      </header>
 
-      <main style={{ display: "grid", gap: "16px" }}>
+      <main className="main-grid">
 
         <section id="weather" className="card">
           <WeatherDisplay />
         </section>
 
-        <section id="clothing" className="card">
+        <section id="clothes" className="card">
           <ClothingRecommender />
         </section>
 
@@ -52,20 +38,11 @@ export default function App() {
           <WeatherDiary />
         </section>
 
-        <section id="assistant" className="card">
-          <AIAssistant />
+        <section id="ai" className="card">
+          <AiAssistant />
         </section>
 
       </main>
-
-      <footer style={{
-        marginTop: "20px",
-        padding: "12px",
-        textAlign: "center",
-        opacity: 0.7
-      }}>
-        © 2025 WEATHERING — Hyperlocal Weather Project
-      </footer>
     </div>
   );
 }
