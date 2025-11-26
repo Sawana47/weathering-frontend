@@ -9,7 +9,7 @@ export default function CrowdsourcedReports(){
 
   async function fetchReports(){
     try{
-      const res = await axios.get('axios.get('https://weathering-backend.onrender.com/api/reports')')
+      const res = await axios.get('https://weathering-backend.onrender.com/api/reports');
       setReports(res.data || [])
     }catch(e){
       setReports([])
