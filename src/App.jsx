@@ -1,27 +1,49 @@
-import { useState, useEffect } from "react";
-import CurrentWeather from "./components/CurrentWeather";
-import Forecast from "./components/Forecast";
-import AISection from "./components/AISection";
+import React from "react";
+import "./App.css";
 
-export default function App() {
+function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-100 to-white text-gray-900">
-      <header className="py-10 text-center">
-        <h1 className="text-5xl font-extrabold tracking-wide">
-          WEATHER FORECAST
-        </h1>
-      </header>
+    <div className="app-container">
 
-      <main className="max-w-5xl mx-auto px-4">
-        <CurrentWeather />
-        <Forecast />
-        <AISection />
-      </main>
+      {/* 🔵 SECTION 1 — VIDEO HEADER */}
+      <section className="hero-section">
+        <video autoPlay loop muted className="background-video">
+          <source src="/weather-video.mp4" type="video/mp4" />
+        </video>
 
-      <footer className="text-center py-8 text-sm opacity-60">
-        © 2025 Weathering — Powered by OpenWeather & AI
-      </footer>
+        <div className="overlay">
+          <h1 className="title">Weather Forecast</h1>
+          <p className="subtitle">Check your current weather and upcoming forecast</p>
+        </div>
+      </section>
+
+      {/* 🔵 SECTION 2 — WEATHER CONTENT */}
+      <section className="weather-section">
+        <h2>Current Weather</h2>
+        <div className="weather-box">
+          {/* 👉 your existing weather code goes here */}
+        </div>
+
+        <h2>Upcoming Weather</h2>
+        <div className="weather-box">
+          {/* 👉 your code for next days weather */}
+        </div>
+      </section>
+
+      {/* 🔵 SECTION 3 — AI FEATURES */}
+      <section className="ai-section">
+        <h2>AI Assistance</h2>
+        <p>Smart weather-based suggestions using AI</p>
+      </section>
+
+      {/* 🔵 SECTION 4 — CLOTHING SUGGESTIONS */}
+      <section className="clothing-section">
+        <h2>Clothing Recommendations</h2>
+        <p>Dress smartly based on temperature & conditions</p>
+      </section>
+
     </div>
   );
 }
-        
+
+export default App;
