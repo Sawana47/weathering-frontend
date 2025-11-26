@@ -16,17 +16,22 @@ export default function CrowdsourcedReports(){
     }
 }
 
-  async function submit(){
-    if(!text.trim()) return
-    try{
-      await axios.post('https://weathering-backend.onrender.com/api/reports', { text, timestamp: Date.now() })', { text, timestamp: Date.now() })
-      setText('')
-      fetchReports()
-    }catch(e){
-      setReports([{ id: Date.now(), text, timestamp: Date.now() }, ...reports])
-      setText('')
+  async function submit() {
+    if (!text.trim()) return;
+
+    try {
+        await axios.post('https://weathering-backend.onrender.com/api/report', {
+            text
+        });
+        
+        setText('');
+        fetchReports();
+    } catch (e) {
+        setReports([{ id: Date.now(), text, time: new Date().toISOString() }]);
+        setText('');
     }
-  }
+}
+  
 
   return (
     <div className="card">
