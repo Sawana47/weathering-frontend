@@ -1,35 +1,71 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import Navbar from "./Navbar.jsx";
 import WeatherDisplay from "./WeatherDisplay.jsx";
 import ClothingRecommender from "./ClothingRecommender.jsx";
 import CrowdsourcedReports from "./CrowdsourcedReports.jsx";
 import WeatherDiary from "./WeatherDiary.jsx";
-import AiAssistant from './AiAssistant.jsx';
+import AIAssistant from "./AIAssistant.jsx";
 
-export default function App(){
+export default function App() {
+  const [dark, setDark] = useState(false);
+
+  useEffect(() => {
+    if (dark) document.body.classList.add("dark");
+    else document.body.classList.remove("dark");
+  }, [dark]);
+
   return (
-    <div className="container">
-      <header className="card header" style={{marginBottom:16}}>
-        <div>
-          <h1 style={{margin:0}}>WEATHERING — Hyperlocal Demo</h1>
-          <div className="small">Ready-to-run skill project for presentation</div>
-        </div>
-        <div className="small">Demo</div>
-      </header>
+    <div className="container" style={{ padding: "16px", maxWidth: "900px", margin: "auto" }}>
 
-      <main style={{display:'grid',gridTemplateColumns:'2fr 1fr',gap:16}}>
-        <section style={{display:'flex',flexDirection:'column',gap:16}}>
+      <Navbar />
+
+      <button
+        onClick={() => setDark(!dark)}
+        style={{
+          padding: "10px 20px",
+          marginBottom: "16px",
+          borderRadius: "8px",
+          border: "none",
+          background: "#444",
+          color: "white",
+          cursor: "pointer"
+        }}
+      >
+        Toggle {dark ? "Light" : "Dark"} Mode
+      </button>
+
+      <main style={{ display: "grid", gap: "16px" }}>
+
+        <section id="weather" className="card">
           <WeatherDisplay />
-          <ClothingRecommender />
-          <AiAssistant />
         </section>
 
-        <aside style={{display:'flex',flexDirection:'column',gap:16}}>
+        <section id="clothing" className="card">
+          <ClothingRecommender />
+        </section>
+
+        <section id="reports" className="card">
           <CrowdsourcedReports />
+        </section>
+
+        <section id="diary" className="card">
           <WeatherDiary />
-        </aside>
+        </section>
+
+        <section id="assistant" className="card">
+          <AIAssistant />
+        </section>
+
       </main>
 
-      <footer style={{textAlign:'center',marginTop:20,color:'#64748b'}} className="small">Made for presentation • Mocked demo</footer>
+      <footer style={{
+        marginTop: "20px",
+        padding: "12px",
+        textAlign: "center",
+        opacity: 0.7
+      }}>
+        © 2025 WEATHERING — Hyperlocal Weather Project
+      </footer>
     </div>
-  )
+  );
 }
