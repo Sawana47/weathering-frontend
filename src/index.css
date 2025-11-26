@@ -1,9 +1,9 @@
 body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #001f3f, #003f7f, #001f3f);
-  color: white;
-  overflow-x: hidden;
+    margin: 0;
+    padding-top: 100px;   /* <-- ADD THIS */
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #001f3f, #0037ff, #00152f);
+    overflow-x: hidden;
 }
 
 /* Page Header */
