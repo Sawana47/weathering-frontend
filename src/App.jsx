@@ -1,3 +1,4 @@
+import CurrentWeather from "./CurrentWeather.jsx";
 import React from "react";
 import "./App.css";
 
