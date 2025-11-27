@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Hero from "./components/Hero";
+import Hero from "./Hero";
 import CurrentWeatherCard from "./components/CurrentWeatherCard";
 import MicroForecast from "./components/MicroForecast";
 import ActivitySuggestions from "./components/ActivitySuggestions";
