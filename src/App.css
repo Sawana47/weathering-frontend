@@ -1,25 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   margin: 0;
   padding: 0;
-  background: #1e90ff; /* bright blue */
+  background: #1e90ff; /* blue */
   font-family: Arial, sans-serif;
 }
 
 .page-container {
+  max-width: 500px;
+  margin: auto;
   padding: 20px;
-  color: white; /* text clearly visible on blue */
+  color: white;
 }
 
-.card {
-  background: rgba(255, 255, 255, 0.2); /* light transparent white */
-  padding: 15px;
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.section-subtitle {
+  font-size: 16px;
   margin-bottom: 15px;
+}
+
+.weather-card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 15px 20px;
   border-radius: 12px;
+  margin-bottom: 20px;
   backdrop-filter: blur(5px);
 }
