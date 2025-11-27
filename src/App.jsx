@@ -22,7 +22,7 @@ function App() {
       <section className="weather-section">
         <h2>Current Weather</h2>
         <div className="weather-box">
-          {/* 👉 your existing weather code goes here */}
+          <CurrentWeather />
         </div>
 
         <h2>Upcoming Weather</h2>
