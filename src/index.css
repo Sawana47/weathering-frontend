@@ -1,68 +1,17 @@
-/* ===== RESET ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Small custom classes */
+:root{
+  --glass: rgba(255,255,255,0.7);
 }
 
-/* ===== GLOBAL BODY STYLING WITH SIMPLE BLUE THEME ===== */
-body {
-  font-family: "Poppins", sans-serif;
-  color: #ffffff;
-  background-color: #1e90ff; /* Simple clean blue */
-  overflow-x: hidden;
-  min-height: 100vh;
+html,body,#root {
+  height: 100%;
 }
 
-/* ===== PAGE LAYOUT WRAPPER ===== */
-.page-container {
-  padding: 40px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-/* ===== CLEAN CARD STYLE (for weather sections) ===== */
-.card {
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  padding: 24px;
-  margin: 20px auto;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
-}
-
-/* ===== HEADINGS ===== */
-h1, h2, h3 {
-  font-weight: 600;
-}
-
-/* ===== NAVIGATION BAR ===== */
-.navbar {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 20px;
-  position: sticky;
-  top: 0;
-  background: rgba(0, 0, 0, 0.15);
-  backdrop-filter: blur(12px);
-  z-index: 10;
-  border-bottom: 1px solid rgba(255,255,255,0.25);
-}
-
-.navbar a {
-  text-decoration: none;
-  color: white;
-  font-size: 18px;
-  transition: opacity 0.3s ease;
-}
-
-.navbar a:hover {
-  opacity: 0.7;
+.hero-bg {
+  background-image: radial-gradient(circle at 10% 10%, rgba(99,102,241,0.08), transparent 10%),
+    radial-gradient(circle at 90% 90%, rgba(56,189,248,0.06), transparent 12%);
 }
