@@ -4,47 +4,30 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="app-container">
+    <div className="page-container">
 
-      {/* 🔵 SECTION 1 — VIDEO HEADER */}
-      <section className="hero-section">
-        <video autoPlay loop muted className="background-video">
-          <source src="/weather-video.mp4" type="video/mp4" />
-        </video>
+  <div className="section-title">Weather Forecast</div>
+  <div className="section-subtitle">Check your current weather and upcoming forecast</div>
 
-        <div className="overlay">
-          <h1 className="title">Weather Forecast</h1>
-          <p className="subtitle">Check your current weather and upcoming forecast</p>
-        </div>
-      </section>
+  <div className="weather-card">
+    <div className="section-title">Current Weather</div>
+    <div>Your Location</div>
+    <div>29°C</div>
+    <div>Sunny</div>
+  </div>
 
-      {/* 🔵 SECTION 2 — WEATHER CONTENT */}
-      <section className="weather-section">
-        <h2>Current Weather</h2>
-        <div className="weather-box">
-          <CurrentWeather />
-        </div>
+  <div className="weather-card">
+    <div className="section-title">Upcoming Weather</div>
+  </div>
 
-        <h2>Upcoming Weather</h2>
-        <div className="weather-box">
-          {/* 👉 your code for next days weather */}
-        </div>
-      </section>
+  <div className="weather-card">
+    <div className="section-title">AI Assistance</div>
+    <div>Smart weather-based suggestions using AI</div>
+  </div>
 
-      {/* 🔵 SECTION 3 — AI FEATURES */}
-      <section className="ai-section">
-        <h2>AI Assistance</h2>
-        <p>Smart weather-based suggestions using AI</p>
-      </section>
+  <div className="weather-card">
+    <div className="section-title">Clothing Recommendations</div>
+    <div>Dress smartly based on temperature & conditions</div>
+  </div>
 
-      {/* 🔵 SECTION 4 — CLOTHING SUGGESTIONS */}
-      <section className="clothing-section">
-        <h2>Clothing Recommendations</h2>
-        <p>Dress smartly based on temperature & conditions</p>
-      </section>
-
-    </div>
-  );
-}
-
-export default App;
+</div>
